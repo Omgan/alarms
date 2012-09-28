@@ -1,0 +1,55 @@
+################################################################################
+#
+# Alarms configuration file
+#
+################################################################################
+#-------------------------------------------------------------------------------
+# OVERVIEW:
+#-------------------------------------------------------------------------------
+#
+# Saving changes to this file will cause the alarms to be re-loaded if the
+# Alarms application is running.  It is not necessary to restart the app.
+#
+# Each line configures an alarm.  An alarm consists of a text message and a set
+# of conditions which, when satisfied, trigger the alarm.
+#
+#    Text Message,condition0,condition1,...,conditionN-1
+#
+# Each condition consist of a condition type and the data specific to that type
+# of condition.  For example, a condition representing 3:30pm would be:
+#
+#    Time=15:30
+#
+# Multiple conditions for an alarm are AND'ed together, so they must ALL be
+# satisfied in order for the alarm to trigger.
+#
+# For alarms which have no time specified, the alarm will only trigger once per
+# day.
+#
+#-------------------------------------------------------------------------------
+# EXAMPLES:
+#-------------------------------------------------------------------------------
+#
+#    # expense report reminder on the 5th of every month
+#    Do Expense Report,DayOfMonth=5
+#
+#    # daily pickup reminder MTWF at 2:30pm
+#    Pickup the Kids from School,DayOfWeek=Monday,TimeOfDay=14:30
+#    Pickup the Kids from School,DayOfWeek=Tuesday,TimeOfDay=14:30
+#    Pickup the Kids from School,DayOfWeek=Wednesday,TimeOfDay=14:30
+#    Pickup the Kids from School,DayOfWeek=Friday,TimeOfDay=14:30
+#
+#    # reminder on Monday to check the weekly WinQual reports
+#    Check WinQual Reports,DayOfWeek=Monday
+#
+#-------------------------------------------------------------------------------
+# CONDITIONS:
+#-------------------------------------------------------------------------------
+#
+# TimeOfDay=HH:MM
+# DayOfWeek=Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday
+# DayOfMonth=1...31
+# MonthOfYear=1...12
+#
+################################################################################
+
